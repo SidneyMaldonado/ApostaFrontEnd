@@ -24,8 +24,8 @@ export class ResultadoService {
     return this.http.post<Resultado>(`${this.rotaBase}/alterar`, resultado)
   }
 
-  consultar(id: Resultado): Observable<Resultado> {
+  consultar(id: number): Observable<Resultado> {
     return this.http.get<Resultado>(`${this.rotaBase}/${id}`)
   }
-  
+
 }
