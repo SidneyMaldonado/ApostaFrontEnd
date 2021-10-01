@@ -1,0 +1,18 @@
+<h1 class="Display-4">Listar Jogos</h1>
+<table>    
+        <thead>
+            <th>#</th>
+            <th>Nome</th>
+            <th>IdCasa</th>
+            <th>IdVisitante</th>
+            <th>IdEstadio</th>
+        </thead>    
+        <tbody>
+            <tr *ngFor="let Jogo of jogos">
+            <td>{{Jogo.IdJogo}}</td>
+            <td>{{Jogo.Nome}}</td>
+            <td>{{Jogo.IdCasa}}</td>
+            <td>{{Jogo.IdEstadio}}</td>            
+        </tr>
+        </tbody>
+</table>
