@@ -13,7 +13,7 @@ export class JogoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(jogo: Jogo){
+  listar():Observable<any>{
     return this.http.get<Jogo>(`${this.rotaBase}/listar`)
   }
 

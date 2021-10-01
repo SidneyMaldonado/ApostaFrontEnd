@@ -12,7 +12,7 @@ export class ResultadoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(resultado: Resultado){
+  listar():Observable<any>{
     return this.http.get<Resultado>(`${this.rotaBase}/listar`)
   }
 
