@@ -11,6 +11,14 @@ import { ListarJogoComponent } from './listar-jogo/listar-jogo.component';
 import { IncluirJogoComponent } from './incluir-jogo/incluir-jogo.component';
 import { AlterarJogoComponent } from './alterar-jogo/alterar-jogo.component';
 import { ListarClienteComponent } from './listar-cliente/listar-cliente/listar-cliente.component';
+import { AlterarClienteComponent } from './alterar-cliente/alterar-cliente.component';
+import { IncluirClienteComponent } from './incluir-cliente/incluir-cliente.component';
+import { ListarEstadioComponent } from './listar-estadio/listar-estadio.component';
+import { IncluirEstadioComponent } from './incluir-estadio/incluir-estadio.component';
+import { AlterarEstadioComponent } from './alterar-estadio/alterar-estadio.component';
+import { ListarApostaComponent } from './listar-aposta/listar-aposta.component';
+import { IncluirApostaComponent } from './incluir-aposta/incluir-aposta.component';
+import { AlterarApostaComponent } from './alterar-aposta/alterar-aposta.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +29,15 @@ import { ListarClienteComponent } from './listar-cliente/listar-cliente/listar-c
     ListarJogoComponent,
     IncluirJogoComponent,
     AlterarJogoComponent,
-    ListarClienteComponent
+    ListarClienteComponent,
+    AlterarClienteComponent,
+    IncluirClienteComponent,
+    ListarEstadioComponent,
+    IncluirEstadioComponent,
+    AlterarEstadioComponent,
+    ListarApostaComponent,
+    IncluirApostaComponent,
+    AlterarApostaComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { Cliente } from '../entities/cliente';
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteServiceService {
+export class ClienteService {
 
   rotaBase: String = "http://localhost:8080/cliente"
 
