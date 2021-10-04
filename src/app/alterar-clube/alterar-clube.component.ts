@@ -26,7 +26,7 @@ export class AlterarClubeComponent implements OnInit {
   }
 
   alterar(frm: NgForm){
-    this.servicoClube.incluir(this.clube).subscribe(
+    this.servicoClube.alterar(this.clube).subscribe(
       dados=> { alert("Clube Cadastrada com sucesso."), console.log(dados)},
       error=> { alert("Erro ao Cadastrar Clube"), console.log(error) }
     )
