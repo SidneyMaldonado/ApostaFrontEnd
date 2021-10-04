@@ -1,1 +1,16 @@
-<p>listar-cliente works!</p>
+<div class="container">     
+    <table class="table">    
+            <thead>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>           
+            </thead>    
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <th scope="row">{{cliente.idCliente}}</th>
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.email}}</td>                                     
+                </tr>
+            </tbody>
+    </table>
+    </div>

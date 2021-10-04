@@ -7,7 +7,10 @@ import { AppComponent } from './app.component';
 import { ListarClubeComponent } from './listar-clube/listar-clube.component';
 import { IncluirClubeComponent } from './incluir-clube/incluir-clube.component';
 import { AlterarClubeComponent } from './alterar-clube/alterar-clube.component';
-import { ListarJogoComponent } from './jogo-listar/listar-jogo.component';
+import { ListarJogoComponent } from './listar-jogo/listar-jogo.component';
+import { IncluirJogoComponent } from './incluir-jogo/incluir-jogo.component';
+import { AlterarJogoComponent } from './alterar-jogo/alterar-jogo.component';
+import { ListarClienteComponent } from './listar-cliente/listar-cliente/listar-cliente.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { ListarJogoComponent } from './jogo-listar/listar-jogo.component';
     ListarClubeComponent,
     IncluirClubeComponent,
     AlterarClubeComponent,
-    ListarJogoComponent
+    ListarJogoComponent,
+    IncluirJogoComponent,
+    AlterarJogoComponent,
+    ListarClienteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Jogo } from 'src/entidades/Jogo';
-import { JogoService } from 'src/services/jogo.service';
+import { Jogo } from 'src/app/entities/Jogo';
+import { JogoService } from 'src/app/services/jogo.service';
 
 @Component({
   selector: 'app-jogo',
@@ -15,7 +15,7 @@ export class ListarJogoComponent implements OnInit {
 
   ngOnInit(): void {
     this.jogoService.listar().subscribe(
-      dados => this.jogos = dados,
+      dados => {this.jogos = dados, console.log(dados)},
       error => alert("erro ao recuperar roupas.")
     )
   }
