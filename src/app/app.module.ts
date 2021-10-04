@@ -19,6 +19,10 @@ import { AlterarEstadioComponent } from './alterar-estadio/alterar-estadio.compo
 import { ListarApostaComponent } from './listar-aposta/listar-aposta.component';
 import { IncluirApostaComponent } from './incluir-aposta/incluir-aposta.component';
 import { AlterarApostaComponent } from './alterar-aposta/alterar-aposta.component';
+import { ListarResultadoComponent } from './listar-resultado/listar-resultado.component';
+import { IncluirResultadoComponent } from './incluir-resultado/incluir-resultado.component';
+import { AlterarResultadoComponent } from './alterar-resultado/alterar-resultado.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import { AlterarApostaComponent } from './alterar-aposta/alterar-aposta.componen
     AlterarEstadioComponent,
     ListarApostaComponent,
     IncluirApostaComponent,
-    AlterarApostaComponent
+    AlterarApostaComponent,
+    ListarResultadoComponent,
+    IncluirResultadoComponent,
+    AlterarResultadoComponent
   ],
   imports: [
     BrowserModule,

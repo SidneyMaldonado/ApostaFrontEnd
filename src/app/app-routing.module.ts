@@ -15,6 +15,9 @@ import { IncluirEstadioComponent } from './incluir-estadio/incluir-estadio.compo
 import { ListarApostaComponent } from './listar-aposta/listar-aposta.component';
 import { AlterarApostaComponent } from './alterar-aposta/alterar-aposta.component';
 import { IncluirApostaComponent } from './incluir-aposta/incluir-aposta.component';
+import { ListarResultadoComponent } from './listar-resultado/listar-resultado.component';
+import { IncluirResultadoComponent } from './incluir-resultado/incluir-resultado.component';
+import { AlterarResultadoComponent } from './alterar-resultado/alterar-resultado.component';
 
 const routes: Routes = [
   {path:'listarclube', component: ListarClubeComponent},
@@ -32,7 +35,10 @@ const routes: Routes = [
   {path:'incluirestadio', component: IncluirEstadioComponent},
   {path:'listarapostas', component: ListarApostaComponent},
   {path:'alteraraposta/:id', component: AlterarApostaComponent},
-  {path:'incluiraposta', component: IncluirApostaComponent}
+  {path:'incluiraposta', component: IncluirApostaComponent},
+  {path:'listarresultados',component: ListarResultadoComponent},
+  {path:'incluirresultado',component:IncluirResultadoComponent},
+  {path:'alterarresultado/:id',component:AlterarResultadoComponent}
 ];
 
 @NgModule({

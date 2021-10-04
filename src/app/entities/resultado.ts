@@ -1,7 +1,7 @@
 export interface Resultado{
-    IdResultado: number;
-    Nome:string;
-    Vencedor:boolean;
-    IdJogo:number;
-    IdClube:number;
+    idResultado: number;
+    nome:string;
+    vencedor:boolean;
+    idJogo:number;
+    idClube:number;
 }
