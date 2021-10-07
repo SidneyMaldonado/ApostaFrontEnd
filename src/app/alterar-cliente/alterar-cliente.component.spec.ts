@@ -1,3 +1,5 @@
+import { ClienteService } from './../services/cliente.service';
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlterarClienteComponent } from './alterar-cliente.component';
@@ -8,6 +10,8 @@ describe('AlterarClienteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [ClienteService],
+      imports:[HttpClientModule],
       declarations: [ AlterarClienteComponent ]
     })
     .compileComponents();
@@ -16,7 +20,6 @@ describe('AlterarClienteComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AlterarClienteComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
