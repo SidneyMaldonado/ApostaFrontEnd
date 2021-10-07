@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ResultadoService } from '../services/resultado.service';
 
 import { ListarResultadoComponent } from './listar-resultado.component';
 
@@ -8,6 +10,8 @@ describe('ListarResultadoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[HttpClientModule],
+      providers:[ResultadoService],
       declarations: [ ListarResultadoComponent ]
     })
     .compileComponents();

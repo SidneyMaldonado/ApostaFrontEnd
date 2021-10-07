@@ -3,6 +3,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlterarClienteComponent } from './alterar-cliente.component';
+import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 describe('AlterarClienteComponent', () => {
   let component: AlterarClienteComponent;
@@ -10,18 +12,18 @@ describe('AlterarClienteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      providers: [ClienteService],
-      imports:[HttpClientModule],
+      imports: [RouterModule, HttpClientModule, FormsModule],
+      providers: [
+        { provide: ActivatedRoute,
+          useValue: { snapshot: { queryParamMap: {  get(): number {  return 6;  }   }    }  }}, 
+          ClienteService ],
       declarations: [ AlterarClienteComponent ]
     })
     .compileComponents();
-  });
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(AlterarClienteComponent);
-    component = fixture.componentInstance;
+    component = fixture.debugElement.componentInstance;
+ 
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
