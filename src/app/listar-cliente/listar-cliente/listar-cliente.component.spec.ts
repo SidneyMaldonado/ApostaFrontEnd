@@ -38,13 +38,13 @@ describe('ListarClienteComponent', () => {
     expect(result).toContain(expected);
   });
 
-  /*it('#Botão enviar - O botão enviar deve aparecer no html', () => {
-  let expected: string = 'Enviar';
-  h1= app.querySelector('#botaoEnviar');
+  it('#Botão enviar - O botão enviar deve aparecer no html', () => {
+  let expected: string = 'Incluir Cliente';
+  h1= app.querySelector('.listarcliente');
   let result= h1.innerHTML;
   expect(result).toEqual(expected);
 
-  });*/
+  });
 
 
 
