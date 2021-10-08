@@ -24,6 +24,7 @@ describe('ListarResultadoComponent', () => {
     fixture = TestBed.createComponent(ListarResultadoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    app = fixture.debugElement.nativeElement;
   });
 
   it('should create', () => {
@@ -31,15 +32,15 @@ describe('ListarResultadoComponent', () => {
   });
 
   it('#Title - O titulo deve aparecer no HTML', () => {
-    let expected:string = 'Listar Cliente';
+    let expected:string = 'Listar Resultado';
     h1 = app.querySelector('h1');
     let result = h1.innerHTML;
     expect(result).toContain(expected);
   });
 
   it('#Botão enviar - O botão enviar deve aparecer no html', () => {
-  let expected: string = 'Incluir Cliente';
-  h1= app.querySelector('.listarcliente');
+  let expected: string = 'Incluir Resultado';
+  h1= app.querySelector('.listarresultado');
   let result= h1.innerHTML;
   expect(result).toEqual(expected);
 
