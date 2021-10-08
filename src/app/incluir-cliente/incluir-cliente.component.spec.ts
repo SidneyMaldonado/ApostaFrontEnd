@@ -40,14 +40,14 @@ describe('IncluirClienteComponent', () => {
 
   });
 
-  it('#Botao enviar - O botão enviar deve aparecer no html', () =>{
-    let expected: string = 'Enviar';
-    h1 = app.querySelector('#botaoEnviar');
+  /*it('#Botao enviar - O botão enviar deve aparecer no html', () =>{
+    let expected: string = 'Incluir Cliente';
+    h1 = app.querySelector('#incluirCliente');
     let result= h1.innerHTML;
     expect(result).toEqual(expected);
   });
 
-  /*
+  
   it('#Input email - O input de email  deve aparecer no html', () =>{
     let expected: string = 'fulano';
     field = app.querySelector('#Email');
