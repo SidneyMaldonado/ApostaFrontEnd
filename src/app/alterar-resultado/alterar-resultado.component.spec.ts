@@ -9,6 +9,9 @@ import { AlterarResultadoComponent } from './alterar-resultado.component';
 describe('AlterarResultadoComponent', () => {
   let component: AlterarResultadoComponent;
   let fixture: ComponentFixture<AlterarResultadoComponent>;
+  let h1: HTMLElement;
+  let field: HTMLInputElement;
+  let app: any; 
   
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -21,11 +24,28 @@ describe('AlterarResultadoComponent', () => {
     })
     .compileComponents();
     fixture = TestBed.createComponent(AlterarResultadoComponent);
-    component = fixture.debugElement.componentInstance;
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+    app=fixture.debugElement.nativeElement;
  
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('#Title - O titulo deve aparecer no HTML', () => {
+    let expected:string = 'Listar Jogos';
+    h1 = app.querySelector('h1');
+    let result = h1.innerHTML;
+    expect(result).toContain(expected);
+  });
+
+  it('#Botão enviar - O botão enviar deve aparecer no html', () => {
+  let expected: string = 'Incluir Jogo';
+  h1= app.querySelector('.incluirjogo');
+  let result= h1.innerHTML;
+  expect(result).toEqual(expected);
+
   });
 });
