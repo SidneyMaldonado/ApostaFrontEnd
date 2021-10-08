@@ -27,7 +27,7 @@ describe('IncluirApostaComponent', () => {
     app = fixture.debugElement.nativeElement;
   });
 
-  it('should create', () => {
+  it('#Create - O componente deve ser criado', () => {
     expect(component).toBeTruthy();
   });
 
