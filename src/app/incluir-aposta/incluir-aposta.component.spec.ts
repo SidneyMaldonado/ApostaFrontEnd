@@ -10,6 +10,9 @@ import { IncluirApostaComponent } from './incluir-aposta.component';
 describe('IncluirApostaComponent', () => {
   let component: IncluirApostaComponent;
   let fixture: ComponentFixture<IncluirApostaComponent>;
+  let h1: HTMLElement;
+  let field: HTMLInputElement;
+  let app: any; 
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -21,9 +24,26 @@ describe('IncluirApostaComponent', () => {
     fixture = TestBed.createComponent(IncluirApostaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    app = fixture.debugElement.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('#Title - O titulo deve constar no html', () => {
+    let expected: string  = 'Incluir Aposta';
+    h1 = app.querySelector('h1');
+    let result = h1.innerHTML;
+    expect(result).toContain(expected);
+
+  });
+
+  it('#Botao enviar - O botão enviar deve aparecer no html', () =>{
+    let expected: string = 'Enviar';
+    h1 = app.querySelector('#botaoEnviar');
+    let result= h1.innerHTML;
+    expect(result).toEqual(expected);
+  });
+
 });
