@@ -10,6 +10,9 @@ import { IncluirJogoComponent } from './incluir-jogo.component';
 describe('IncluirJogoComponent', () => {
   let component: IncluirJogoComponent;
   let fixture: ComponentFixture<IncluirJogoComponent>;
+  let h1: HTMLElement;
+  let field: HTMLInputElement;
+  let app: any; 
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -20,10 +23,25 @@ describe('IncluirJogoComponent', () => {
     .compileComponents();
     fixture = TestBed.createComponent(IncluirJogoComponent);
     component = fixture.componentInstance;
+    app=fixture.debugElement.nativeElement;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('#Title - O titulo deve aparecer no HTML', () => {
+    let expected:string = 'Incluir Jogo';
+    h1 = app.querySelector('h1');
+    let result = h1.innerHTML;
+    expect(result).toContain(expected);
+  });
+
+  it('#Botão enviar - O botão enviar deve aparecer no html', () => {
+  let expected: string = 'Enviar';
+  h1= app.querySelector('.btn');
+  let result= h1.innerHTML;
+  expect(result).toEqual(expected);
   });
 });
