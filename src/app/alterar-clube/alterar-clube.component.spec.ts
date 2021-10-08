@@ -9,6 +9,9 @@ import { AlterarClubeComponent } from './alterar-clube.component';
 describe('AlterarClubeComponent', () => {
   let component: AlterarClubeComponent;
   let fixture: ComponentFixture<AlterarClubeComponent>;
+  let h1: HTMLElement;
+
+  let app: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -22,10 +25,26 @@ describe('AlterarClubeComponent', () => {
     .compileComponents();
     fixture = TestBed.createComponent(AlterarClubeComponent);
     component = fixture.debugElement.componentInstance;
+    app = fixture.debugElement.nativeElement;
  
   });
 
-  it('should create', () => {
+  it('#Create - O componente deve ser criado', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('#Title - O titulo deve constar no html', () => {
+    let expected: string  = 'Alterar Clube';
+    h1 = app.querySelector('h1');
+    let result = h1.innerHTML;
+    expect(result).toContain(expected);
+
+  });
+
+  it('#Botao enviar - O botão enviar deve aparecer no html', () =>{
+    let expected: string = 'Enviar';
+    h1 = app.querySelector('.btn');
+    let result= h1.innerHTML;
+    expect(result).toEqual(expected);
   });
 });
