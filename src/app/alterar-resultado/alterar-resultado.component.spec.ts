@@ -24,8 +24,7 @@ describe('AlterarResultadoComponent', () => {
     })
     .compileComponents();
     fixture = TestBed.createComponent(AlterarResultadoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = fixture.componentInstance;  
     app=fixture.debugElement.nativeElement;
  
   });
@@ -35,15 +34,15 @@ describe('AlterarResultadoComponent', () => {
   });
 
   it('#Title - O titulo deve aparecer no HTML', () => {
-    let expected:string = 'Listar Jogos';
+    let expected:string = 'Alterar Resultado';
     h1 = app.querySelector('h1');
     let result = h1.innerHTML;
     expect(result).toContain(expected);
   });
 
   it('#Botão enviar - O botão enviar deve aparecer no html', () => {
-  let expected: string = 'Incluir Jogo';
-  h1= app.querySelector('.incluirjogo');
+  let expected: string = 'Enviar';
+  h1= app.querySelector('.btn');
   let result= h1.innerHTML;
   expect(result).toEqual(expected);
 
