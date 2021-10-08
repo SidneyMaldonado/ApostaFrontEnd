@@ -7,6 +7,9 @@ import { ListarResultadoComponent } from './listar-resultado.component';
 describe('ListarResultadoComponent', () => {
   let component: ListarResultadoComponent;
   let fixture: ComponentFixture<ListarResultadoComponent>;
+  let h1: HTMLElement;
+  let field: HTMLInputElement;
+  let app: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -25,5 +28,20 @@ describe('ListarResultadoComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('#Title - O titulo deve aparecer no HTML', () => {
+    let expected:string = 'Listar Cliente';
+    h1 = app.querySelector('h1');
+    let result = h1.innerHTML;
+    expect(result).toContain(expected);
+  });
+
+  it('#Botão enviar - O botão enviar deve aparecer no html', () => {
+  let expected: string = 'Incluir Cliente';
+  h1= app.querySelector('.listarcliente');
+  let result= h1.innerHTML;
+  expect(result).toEqual(expected);
+
   });
 });

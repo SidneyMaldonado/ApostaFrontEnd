@@ -46,8 +46,4 @@ describe('ListarClienteComponent', () => {
 
   });
 
-
-
-
-
 });
